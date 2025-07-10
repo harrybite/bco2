@@ -2,11 +2,9 @@
 
 import { useState } from 'react';
 import { useContract } from '@/lib/hooks/useContract';
-import { useWallet } from '@/lib/hooks/useWallet';
 
 export default function GovernancePage() {
   const { bco2Contract } = useContract();
-  const { account } = useWallet();
   const [maxPerWallet, setMaxPerWallet] = useState('');
   const [treasury, setTreasury] = useState('');
   const [uri, setUri] = useState('');

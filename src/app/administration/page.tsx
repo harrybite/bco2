@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import WalletConnect from '@/components/WalletConnect';
 
-export default function AdministrationLayout({ children }: { children: React.ReactNode }) {
+export default function AdministrationLayout() {
   return (
     <WalletConnect>
       <div className="flex">
@@ -17,7 +17,6 @@ export default function AdministrationLayout({ children }: { children: React.Rea
             Registry
           </Link>
         </div>
-        <div className="w-3/4 p-4">{children}</div>
       </div>
     </WalletConnect>
   );
