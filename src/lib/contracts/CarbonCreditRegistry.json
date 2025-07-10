@@ -1,0 +1,79 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {"internalType": "uint256", "name": "_mintPrice", "type": "uint256"},
+        {"internalType": "address", "name": "_treasury", "type": "address"},
+        {"internalType": "bool", "name": "_defaultIsPermanent", "type": "bool"},
+        {"internalType": "uint256", "name": "_defaultValidity", "type": "uint256"},
+        {"internalType": "uint256", "name": "_defaultVintage", "type": "uint256"},
+        {"internalType": "string", "name": "_methodology", "type": "string"},
+        {"internalType": "uint256", "name": "_batchNumber", "type": "uint256"},
+        {"internalType": "string", "name": "_repoLink", "type": "string"},
+        {"internalType": "string", "name": "_nonRetiredURI", "type": "string"},
+        {"internalType": "string", "name": "_retiredURI", "type": "string"}
+      ],
+      "name": "createProject",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [{"internalType": "address", "name": "projectContract", "type": "address"}],
+      "name": "isProjectApproved",
+      "outputs": [{"internalType": "bool", "name": "", "type": "bool"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [{"internalType": "address", "name": "projectContract", "type": "address"}],
+      "name": "creditAmountIssued",
+      "outputs": [{"internalType": "uint256", "name": "", "type": "uint256"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {"internalType": "address", "name": "projectContract", "type": "address"},
+        {"internalType": "string", "name": "certificateId", "type": "string"}
+      ],
+      "name": "setCertificateId",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getProjects",
+      "outputs": [{"internalType": "address[]", "name": "", "type": "address[]"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {"indexed": true, "internalType": "address", "name": "projectContract", "type": "address"},
+        {"indexed": false, "internalType": "string", "name": "certificateId", "type": "string"}
+      ],
+      "name": "CertificateIDUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {"indexed": true, "internalType": "address", "name": "projectContract", "type": "address"}
+      ],
+      "name": "ProjectCreated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {"indexed": true, "internalType": "address", "name": "projectContract", "type": "address"}
+      ],
+      "name": "ProjectApproved",
+      "type": "event"
+    }
+  ],
+  "address": "0xYourCarbonCreditRegistryAddress"
+}
